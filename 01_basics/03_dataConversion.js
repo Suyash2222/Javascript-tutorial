@@ -27,3 +27,5 @@ let stringNumber= String(someNumber);// number converted to string
 console.log(stringNumber);
 console.log(typeof stringNumber);
 
+
+
