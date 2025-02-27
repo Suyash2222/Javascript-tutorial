@@ -23,11 +23,23 @@ const obj2={3:"c",4:"d"}
 //The Object.assign() static method copies all enumerable own properties from one or more source objects to a target object. 
 // It returns the modified target object.
 const obj3={...obj1,...obj2}
-console.log(obj3);
+// console.log(obj3);
 
 
-console.log(Object.keys(AppUser));
-console.log(Object.values(AppUser));
-console.log(Object.entries(AppUser));
+// console.log(Object.keys(AppUser));
+// console.log(Object.values(AppUser));
+// console.log(Object.entries(AppUser));
 
+//****************Object Destructuring***************************
 
+const course={
+    courseName:"FullStack",
+    coursePrice:49999,
+    courseInstructor:"Komal"
+}
+
+// console.log(course.courseInstructor);
+
+const {courseInstructor: instructor} = course
+
+console.log(instructor);
