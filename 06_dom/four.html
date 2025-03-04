@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body style="background-color: black; color: snow;">
+    <ul class="language">
+        <li>Java</li>
+    </ul>
+
+</body>
+    <script>
+        function addLang(lang){
+            const li=document.createElement('li')
+            li.innerHTML=`${lang}`
+            document.querySelector('.language').appendChild(li)
+
+        }
+
+        addLang('JavaScript')
+        addLang('Python')
+
+
+        function addOptiLang(lang){
+            const li=document.createElement('li')
+            li.appendChild(document.createTextNode(lang))
+            document.querySelector('.language').appendChild(li)
+        }
+
+        addOptiLang('Golang')
+
+        //edit
+        const secondLang=document.querySelector('li:nth-child(2)')
+        console.log(secondLang);
+        const newli=document.createElement('li')
+        newli.textContent="Mojito"
+        secondLang.replaceWith(newli)
+
+        //remove
+        const lastEle= document.querySelector('li:last-child')
+        lastEle.remove()
+        
+    </script>
+</html>
